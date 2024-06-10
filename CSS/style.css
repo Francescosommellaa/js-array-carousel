@@ -5,8 +5,9 @@
     box-sizing: border-box;
 }
 
-div {
+.container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-self: center;
     width: 80%;
@@ -15,13 +16,67 @@ div {
 }
 
 
+.carosello-completo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+
 /* regole carosello */
+#carousel{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
 .mySlides {
     display:none;
+    border-radius: 15px;
 }
 
 .active {
     display:block;
+    width: 100%;
+}
+
+.mySlides img, .thumbnail {
+    width: 300px;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+/* regole pulsante prev e next */
+.pulsanti-navigazione {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+}
+
+.button:hover {
+    color: #fff;
+    background-color: #3e8e41
 }
 
 
@@ -30,5 +85,6 @@ div {
     opacity:0.6;
 }
 .thumbnail.active {
-    border:2px solid #f00; opacity:1;
+    border:2px solid #fff; opacity:1;
+    width: 100%;
 }
