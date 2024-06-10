@@ -1,3 +1,4 @@
+/* regole generali */
 * {
     padding: 0;
     margin: 0;
@@ -11,4 +12,23 @@ div {
     width: 80%;
     margin: 0 auto;
     height: 100vh;
+}
+
+
+/* regole carosello */
+.mySlides {
+    display:none;
+}
+
+.active {
+    display:block;
+}
+
+
+/* regole miniature */
+.thumbnail {
+    opacity:0.6;
+}
+.thumbnail.active {
+    border:2px solid #f00; opacity:1;
 }
