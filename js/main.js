@@ -1,12 +1,13 @@
 // Array di immagini
-var images = ["img/01.webp", "img/02.webp", "img/03.webp", "img/04.webp", "img/05.webp"];
+const images = ["img/01.webp", "img/02.webp", "img/03.webp", "img/04.webp", "img/05.webp"];
+
 // Indice dell'immagine attiva
-var slideIndex = 0;
+let slideIndex = 0;
 
 // Crea le immagini del carosello
-for (var i = 0; i < images.length; i++) {
+for (let i = 0; i < images.length; i++) {
     // Crea un nuovo elemento img
-    var img = document.createElement("img");
+    let img = document.createElement("img");
     // Imposta il percorso dell'immagine
     img.src = images[i];
     // Aggiungi la classe mySlides
@@ -17,7 +18,7 @@ for (var i = 0; i < images.length; i++) {
     document.getElementById("carousel").appendChild(img);
 
     // Crea le miniature
-    var thumb = document.createElement("img");
+    let thumb = document.createElement("img");
     // Imposta il percorso della miniatura
     thumb.src = images[i];
     // Aggiungi la classe thumbnail
@@ -31,12 +32,12 @@ for (var i = 0; i < images.length; i++) {
 // Funzione per cambiare l'immagine attiva
 function changeSlide(n) {
     // Ottieni tutte le immagini e le miniature
-    var slides = document.getElementsByClassName("mySlides");
-    var thumbnails = document.getElementsByClassName("thumbnail");
+    let slides = document.getElementsByClassName("mySlides");
+    let thumbnails = document.getElementsByClassName("thumbnail");
     // Calcola il nuovo indice dell'immagine attiva
     slideIndex = (slideIndex + n + images.length) % images.length;
     // Nascondi tutte le immagini e le miniature
-    for (var i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
         slides[i].classList.remove("active");
         thumbnails[i].classList.remove("active");
     }
@@ -46,5 +47,11 @@ function changeSlide(n) {
 }
 
 // Aggiungi gli event listener per i pulsanti Prev e Next
-document.getElementById("prev").addEventListener("click", function() { changeSlide(-1); });
-document.getElementById("next").addEventListener("click", function() { changeSlide(1); });
+document.getElementById("prev").addEventListener("click", 
+    function() { 
+        changeSlide(-1); 
+    });
+document.getElementById("next").addEventListener("click", 
+    function() { 
+        changeSlide(1); 
+     });
