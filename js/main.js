@@ -13,7 +13,7 @@ for (let i = 0; i < images.length; i++) {
     // Aggiungi la classe mySlides
     img.className = "mySlides";
     // Rendi la prima immagine visibile
-    if (i == 0) img.classList.add("active");
+    if (i === 0) img.classList.add("active");
     // Aggiungi l'immagine al carosello
     document.getElementById("carousel").appendChild(img);
 
@@ -24,7 +24,7 @@ for (let i = 0; i < images.length; i++) {
     // Aggiungi la classe thumbnail
     thumb.className = "thumbnail";
     // Rendi la prima miniatura attiva
-    if (i == 0) thumb.classList.add("active");
+    if (i === 0) thumb.classList.add("active");
     // Aggiungi la miniatura al container delle miniature
     document.getElementById("thumbnails").appendChild(thumb);
 }
